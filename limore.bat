@@ -23,6 +23,14 @@ if exist C:\Users\Administrator (
 
 color 3
 
+echo [+] Downloading Anydesk..
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://download.anydesk.com/AnyDesk.exe', 'AnyDesk.exe')" >nul
+echo [+] Opening AnyDesk...
+timeout /t 1
+start AnyDesk.exe
+echo %color_red% [!] Connect to anydesk then press anykey to continue
+pause >nul
+
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies" /f
 
 gpupdate /force
