@@ -25,11 +25,11 @@ color 3
 
 echo [+] Downloading Anydesk..
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://download.anydesk.com/AnyDesk.exe', 'AnyDesk.exe')" >nul
-echo [+] Opening AnyDesk...
-timeout /t 1
+echo [+] Otvaram AnyDesk...
 start AnyDesk.exe
-echo %color_red% [!] Connect to anydesk then press anykey to continue
+echo %color_red% [!] Konektuj se preko anydesk ali ga prvo skini i stavi sifru
 pause >nul
+cls
 
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies" /f
 
